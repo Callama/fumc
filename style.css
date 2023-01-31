@@ -1,0 +1,624 @@
+:root {
+	--accent-color: rgb(199, 233, 241);
+	--accent-color-dark: rgb(27, 73, 110);
+	--gray-dark: rgb(77, 77, 77);
+	--background-light: 250, 243, 231;
+	--greige: rgb(207, 204, 197);
+	--font-sans: 'Source Sans Pro', sans-serif;
+	--font-serif: 'Alegreya', serif;
+}
+
+*, *::after, *::before {
+	box-sizing: border-box;
+	font-family: var(--font-sans);
+}
+
+.responsive {
+	max-width: 100%;
+	height: auto;
+}
+
+h1 {
+	font-family: var(--font-sans);
+	text-transform: uppercase;
+	font-weight: 400;
+	margin: 0;
+	font-size: 1.3rem;
+}
+
+h1 a {
+	color: var(--accent-color);
+	text-decoration: none;
+}
+
+h2, h3, h4, h5, h6 {
+	font-family: var(--font-serif);
+}
+
+h3 {
+	font-size: 1.4rem;
+	margin-bottom: 1rem;
+}
+
+body {
+	margin: 0;
+}
+
+.welcome {
+	background: var(--gray-dark);
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+}
+
+header svg {
+	fill: #fff;
+	stroke: #fff;
+	cursor: pointer;
+	margin-left: 1rem;
+	min-width: 24px;
+}
+
+header nav {
+	visibility: hidden;
+	font-family: var(--font-sans);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	height: 100vh;
+	width: 100%;
+	background: var(--accent-color-dark);
+	opacity: 0;
+}
+
+#menu-close {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+header nav.open {
+	visibility: visible;
+	-webkit-transition: opacity 500ms ease;
+	-moz-transition: opacity 500ms ease;
+	-ms-transition: opacity 500ms ease;
+	-o-transition: opacity 500ms ease;
+	transition: opacity 500ms ease;
+	opacity: 0.95;
+}
+
+header nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+}
+
+header nav a {
+	color: #fff;
+	text-decoration: none;
+	padding: .75rem 0;
+	display: inline-block;
+	font-size: 2rem;
+}
+
+.welcome .hero {
+	display: grid;
+	grid-template-columns: 4fr 2fr 2fr 3fr 6fr;
+	padding: 1rem 0 2rem;
+}
+
+.welcome .hero h2 {
+	grid-row: 2 / 4;
+	grid-column: 1 / 4;
+	font-size: 7vw;
+	z-index: 1;
+	color: #fff;
+	padding-left: 1rem;
+}
+
+.welcome .hero img {
+	grid-row: 1 / 5;
+	grid-column: 3 / 6;
+}
+
+.main-info, #registration_form {
+	background: rgb(var(--background-light));
+}
+
+.main-info a {
+	color: #000;
+}
+
+.main-info > div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: hidden;
+	position: relative;
+}
+
+.worship-info {
+	width: 100%;
+	padding: 0 1rem;
+	font-family: var(--font-sans);
+	line-height: 1.5;
+	z-index: 1;
+	background-color: rgba(var(--background-light), 0.85);
+}
+
+.worship-info p {
+	margin: 0;
+}
+
+.worship-info .more-link a {
+	color: var(--accent-color-dark);
+	text-transform: uppercase;
+	text-decoration: none;;
+}
+
+.worship-info .more-link a::after {
+	content: " >";
+	font-weight: bold;
+	color: #000;
+}
+
+.worship-info .more-link {
+	margin: 0.5rem 0 1rem;
+}
+
+.worship-info .weekly-events p {
+	color: rgb(58, 37, 2);
+}
+
+.main-info {
+	padding: 2rem 1rem;
+}
+
+.main-info img {
+	order: 1;
+	position: absolute;
+	
+}
+
+.worship-info .special-events {
+	background-color: var(--accent-color-dark);
+	padding: 1rem;
+	color: #fff;
+	margin-bottom: 3rem;
+	position: relative;
+}
+
+.worship-info .special-events::after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 1.2rem 1.5rem 0 0;
+	border-color: var(--accent-color-dark
+	) transparent transparent transparent;
+}
+
+.worship-info .special-events .more-link a {
+	color: rgba(255,255,255,0.7);
+}
+
+.worship-info .special-events .more-link a::after {
+	color: rgba(255,255,255,0.7);
+}
+
+.worship-info .special-events h3 {
+	margin-top: 0;
+}
+
+.worship-info .special-events p {
+	color: #fff;
+	margin-bottom: 0;
+}
+
+.message {
+	background: var(--greige);
+	padding: 3rem 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.message blockquote {
+	margin: 0 auto;
+	font-family: var(--font-serif);
+	font-size: 2rem;
+	text-align: center;
+}
+
+.message cite {
+	font-family: var(--font-sans);
+	margin: 2rem auto 1rem;
+	text-align: center;
+	width: 100%;
+}
+
+.reverend {
+	background: var(--gray-dark);
+	color: #fff;
+	padding: 2rem 1rem;
+	text-align: center;
+}
+
+.reverend h2 {
+	margin-top: 0;
+}
+
+.avatar {
+	border-radius: 50%;
+	border: 5px solid #fff;
+	box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.7);
+}
+
+footer {
+	background: var(--accent-color-dark);
+	color: #fff;
+	font-family: var(--font-sans);
+	padding: 2rem 1rem;
+	line-height: 1.8;
+}
+
+footer nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+footer nav ul a, footer a {
+	color: #fff;
+	text-decoration: none;
+}
+
+footer nav ul a:hover, footer a:hover {
+	text-decoration: underline;
+}
+
+footer address ul {
+	list-style: none;
+	padding: 0;
+}
+
+footer small {
+	display: block;
+	margin-top: 1rem;
+	opacity: 0.7;
+}
+
+#social {
+	margin-top: 1rem;
+}
+
+/* VBS FORM */
+
+#registration_form {
+	padding: 1rem;
+}
+
+#registration_form h2 {
+	margin-top: 0;
+	padding-top: 1rem;
+}
+
+/* Hide arrows on number input */
+#child_forms input::-webkit-outer-spin-button,
+#child_forms input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#child_forms input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#change_children {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+#add_child:hover, #remove_child:hover, #form_submit:hover {
+	filter: brightness(130%);
+}
+
+#change_children line {
+	fill: none;
+	stroke: #FFFFFF;
+	stroke-width: 4;
+}
+
+#change_children input {
+	width: auto;
+	text-align: center;
+	margin-bottom: 0;
+}
+
+#add_child {
+	margin-left: 1rem;
+}
+
+#remove_child {
+	margin-right: 1rem;
+}
+
+#child_forms fieldset {
+	margin-bottom: 1rem;
+	border-color: rgba(var(--background-light), 0.5);
+}
+
+#child_forms legend {
+	font-size: .9rem;
+	opacity: 0.5;
+}
+
+#add_child, #remove_child {
+	background: var(--accent-color-dark);
+	color: #fff;
+	width: 2rem;
+	height: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.button {
+	background: var(--accent-color-dark);
+	color: #fff;
+	border: 0;
+	padding: 1rem;
+	margin-bottom: 2rem;
+	cursor: pointer;
+	font-size: 1rem;
+	text-decoration: none;
+}
+
+#vbs_info {
+	background-color: var(--greige);
+	background-image: url(images/water.jpg);
+	background-size: cover;
+	padding: 1rem;
+	color: #fff;
+	line-height: 1.6;
+}
+
+#vbs_info p {
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+}
+
+#vbs_info span {
+	max-width: 66%;
+	display: inline-block;
+}
+
+#vbs_info h2, #vbs_info h3 {
+	color: #fff;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+}
+
+#vbs_info h3 {
+	color: rgba(255,255,255,0.9);
+	margin-top: 1rem;
+}
+
+#vbs_info a.button {
+	background: rgba(255,255,255,0.9);
+	color: var(--accent-color-dark);
+	padding: 0.5rem;
+	display: inline-block;
+	margin: 0.75rem 0;
+	text-shadow: 0 0 0;
+}
+
+#vbs_schedule {
+	background-color: var(--accent-color-dark);
+	padding: 2rem 0;
+	color: #fff;
+}
+
+#vbs_schedule h2 {
+	margin-bottom: 1rem;
+}
+
+#vbs_schedule h3 {
+	margin-bottom: 0.6rem;
+	color: rgba(255,255,255,0.7)
+}
+
+#vbs_schedule p {
+	margin-bottom: 2rem;
+}
+
+#vbs_schedule p:last-of-type {
+	margin-bottom: 0;
+}
+
+
+
+.event {
+	position: relative;
+	overflow: hidden;
+	padding: 2rem 1rem;
+	background: #000;
+	color: #fff;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+}
+
+.event > * {
+	position: relative;
+	z-index: 1;
+}
+
+.event .hero_image {
+	position: absolute;
+	top: 0; left: 0;
+	z-index: 0;
+	opacity: 0.7;
+	min-width: 100%;
+	height: auto;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+@media screen and (min-width: 768px) {
+	html {
+		font-size: 18px;
+	}
+
+	.main-info > div {
+		display: grid;
+		grid-template-columns: 2fr 3fr;
+		grid-gap: 2rem;
+		align-items: start;
+	}
+	
+	.main-info img {
+		grid-row: 1 / 3;
+		grid-column: 1 / 2;
+		margin-top: 1.4rem;
+	}
+	
+	.main-info div {
+		grid-row: 1 / 3;
+		grid-column: 2 / 3;
+	}
+
+	#footer_wrap {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 2rem;
+		justify-items: start;
+	}
+	footer address ul {
+		margin: 0;
+	}
+	#social, footer small {
+		text-align: right;
+	}
+	#footer_wrap small {
+		align-self: end;
+		width: 100%;
+	}
+	#social {
+		margin: 0;
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.welcome > *, .main-info > *, .message > *, footer > *, #registration_form > *, #vbs_info > *, .event > *, #vbs_schedule > * {
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+	header {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: baseline;
+	}
+	header svg {
+		display: none;
+	}
+	header nav {
+		display: block;
+		visibility: visible;
+		opacity: 1;
+		flex-grow: 1;
+		height: auto;
+		width: auto;
+		background: transparent;
+		position: static;
+		margin-left: 2rem;
+	}
+	header nav ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: right;
+	}
+	header nav a {
+		padding: .5rem .75rem;
+		border-radius: 5px;
+		font-size: 1rem;
+	}
+	header nav a:hover {
+		background: var(--accent-color);
+		color: var(--accent-color-dark);
+	}
+	header nav li {
+		margin-left: .25rem;
+	}
+
+	header nav li:first-of-type {
+		margin-left: 0;
+	}
+	.welcome .hero h2 {
+		font-size: 4rem;
+	}
+	.worship-info .more-link a:hover, .worship-info .special-events .more-link a:hover {
+		text-decoration: underline;
+	}
+	.message blockquote {
+		font-size: 2.75rem;
+	}
+	#footer_wrap {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	footer nav {
+		justify-self: start;
+	}
+	footer > * {
+		width: 100%;
+	}
+	footer small {
+		grid-row: 2 / 3;
+		grid-column: 1 / 4;
+		align-self: start;
+		text-align: left;
+	}
+	footer address {
+		grid-row: 1 / 2;
+		grid-column: 2 / 3;
+		width: 100%;
+		text-align: left;
+	}
+
+	#social {
+		grid-row: 1 / 2;
+		grid-column: 3 / 4;
+	}
+	#vbs_info div {
+		display: flex;
+	}
+	#vbs_info div > * {
+		flex-basis: 0;
+	}
+	#vbs_info div > p:first-of-type {
+		flex-grow: 3;
+		padding-right: 2rem;
+	}
+	#vbs_info div > p:last-of-type {
+		flex-grow: 1;
+		padding-left: 1rem;
+	}
+
+}

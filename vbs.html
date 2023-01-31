@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&family=Source+Sans+Pro&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="formbase.min.css">
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<title>First United Methodist Church of Waynesburg</title>
+</head>
+<body>
+	<section class="welcome">
+		<header>
+			<h1><a href="index.html">First United Methodist Church</a></h1>
+			<svg id="menu-open" viewBox="0 0 100 80" width="25" height="30">
+				<rect width="100" height="14" rx="4"></rect>
+				<rect y="30" width="100" height="14" rx="4"></rect>
+				<rect y="60" width="100" height="14" rx="4"></rect>
+			</svg>
+			<nav id="menu">
+				<svg id="menu-close" viewBox="0 0 100 80" width="25" height="30">
+					<line x1="95" x2="5" y1="85" y2="5" stroke-width="14"/>
+					<line x1="5" x2="95" y1="85" y2="5" stroke-width="14"/>
+				</svg>
+				<ul>
+					<!-- <li><a href="#">About</a></li> -->
+					<!-- <li><a href="ministry.html">Ministry</a></li> -->
+					<!-- <li><a href="#">Classes</a></li> -->
+					<!-- <li><a href="#">Sunday School</a></li> -->
+					<li><a href="vbs.html">VBS</a></li>
+					<!-- <li><a href="#">Contact</a></li> -->
+				</ul>
+			</nav>
+		</header>
+		
+	</section>
+	<section id="vbs_info">
+		<h2>Vacation Bible School - The Wacky World of Water</h2>
+		<h3>August 16 through 19, 6 to 8pm</h3>
+		<p><a href="#registration_form" class="button">Register Now</a></p>
+		<div>
+			<p>Your child will have fun, meet new friends, and, most importantly, grow their faith in our Lord during FUMC's "The Wacky World of Water" Vacation Bible School. Join us for the big pool party at the Waynesburg pool on August 13!</p>
+			<p>Registration is open now!</p>
+		</div>
+	</section>
+	<section id="vbs_schedule">
+		<h2>VBS Schedule</h2>
+		<h3>Kick-off pool party</h3>
+		<p>Friday, August 13th from 7 to 9pm</p>
+		<h3>Vacation Bible School</h3>
+		<p>August 16 through 19, 6 to 8pm</p>
+	</section>
+	<section id="registration_form">
+		<form id="vbs_form" name="VBS" method="POST" data-netlify="true" action="/success.html">
+			<h2>VBS Registration Form</h2>
+			<label>Parent's Email</label>
+			<input class="input" type="email" name="email" placeholder="email@example.com" required/>
+			
+			<label>Parent's Phone Number</label>
+			<input class="input" type="tel" name="phone" placeholder="000-000-0000" required/>
+			<label>Parent's address</label>
+			<input class="input" type="text" name="address" required/>
+			<label>Parent's city</label>
+			<input class="input" type="text" name="city" require/>
+			<label>Parent's ZIP code</label>
+			<input class="input" type="text" name="zip" pattern="[0-9]{5}" required/>
+
+
+			<label for="number_of_children">Number of children attending</label>
+			<div id="change_children">
+				<div id="remove_child">
+					<svg width="20px" height="4px" viewBox="0 0 20 4">
+						<line class="st0" x1="0" y1="2" x2="20" y2="2"/>
+					</svg>
+				</div>
+				<input class="input" type="text" name="number_of_children" id="number_of_children" value="0" size="1" max="10" readonly>
+				<div id="add_child">
+					<svg width="20px" height="20px" viewBox="0 0 20 20">
+						<line class="st0" x1="0" y1="10" x2="20" y2="10"/>
+						<line class="st0" x1="10" y1="0" x2="10" y2="20"/>
+					</svg>
+
+				</div>
+			</div>
+			<input type="hidden" name="Child 1 Name" />
+			<input type="hidden" name="Child 1 Age" />
+			<input type="hidden" name="Child 2 Name" />
+			<input type="hidden" name="Child 2 Age" />
+			<input type="hidden" name="Child 3 Name" />
+			<input type="hidden" name="Child 3 Age" />
+			<input type="hidden" name="Child 4 Name" />
+			<input type="hidden" name="Child 4 Age" />
+			<input type="hidden" name="Child 5 Name" />
+			<input type="hidden" name="Child 5 Age" />
+			<input type="hidden" name="Child 6 Name" />
+			<input type="hidden" name="Child 6 Age" />
+			<input type="hidden" name="Child 7 Name" />
+			<input type="hidden" name="Child 7 Age" />
+			<input type="hidden" name="Child 8 Name" />
+			<input type="hidden" name="Child 8 Age" />
+			<input type="hidden" name="Child 9 Name" />
+			<input type="hidden" name="Child 9 Age" />
+			<input type="hidden" name="Child 10 Name" />
+			<input type="hidden" name="Child 10 Age" />
+			<div id="child_forms"></div>
+			
+			<label>Special requests</label>
+			<textarea class="input" rows="4" cols="40" name="message"></textarea>
+			<button type="submit" class="button" id="form_submit">Register</button>
+		</form>		  
+	</section>
+	<footer>
+		<div id="footer_wrap">
+			<nav>
+				<ul>
+					<!-- <li><a href="#">About</a></li> -->
+					<!-- <li><a href="ministry.html">Ministry</a></li> -->
+					<!-- <li><a href="#">Classes</a></li> -->
+					<!-- <li><a href="#">Sunday School</a></li> -->
+					<li><a href="vbs.html">VBS</a></li>
+					<!-- <li><a href="#">Contact</a></li> -->
+				</ul>
+			</nav>
+			<div id="social">
+				<a href="https://www.facebook.com/FirstUMCWaynesburg/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" x="0px" y="0px" width="30" height="30" fill="#ffffff" viewBox="0 0 50 50" style="null">
+					<path d="M40,0H10C4.486,0,0,4.486,0,10v30c0,5.514,4.486,10,10,10h30c5.514,0,10-4.486,10-10V10C50,4.486,45.514,0,40,0z M39,17h-3 c-2.145,0-3,0.504-3,2v3h6l-1,6h-5v20h-7V28h-3v-6h3v-3c0-4.677,1.581-8,7-8c2.902,0,6,1,6,1V17z"></path>
+				</svg></a>
+			</div>
+			<address>
+				<ul>
+					<li>112 N. Richhill Street, Waynesburg, PA 15370</li>
+					<li><a href="tel:+17246275951">724-627-5951</a></li>
+					<li><a href="mailto:firstumcpa112@gmail.com">firstumcpa112@gmail.com</a></li>
+				</ul>
+			</address>
+			<small>&copy; Copyright 2021, FUMC</small>
+		</div>
+	</footer>
+	<script src="script.js"></script>
+	<script src="form.js"></script>
+</body>
+</html>

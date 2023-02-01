@@ -231,7 +231,7 @@ header nav a {
 
 .message {
 	background: var(--greige);
-	padding: 3rem 1rem;
+	padding: 2rem 1rem;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -295,6 +295,7 @@ footer nav ul a:hover, footer a:hover {
 footer address ul {
 	list-style: none;
 	padding: 0;
+	
 }
 
 footer small {
@@ -306,6 +307,7 @@ footer small {
 #social {
 	margin-top: 1rem;
 }
+
 
 /* VBS FORM */
 
@@ -523,6 +525,7 @@ footer small {
 		margin: 0;
 		width: 100%;
 	}
+	
 }
 
 @media screen and (min-width: 1000px) {
@@ -605,6 +608,10 @@ footer small {
 	#social {
 		grid-row: 1 / 2;
 		grid-column: 3 / 4;
+	}
+	#credits {
+		grid-row: 1 / 1;
+		grid-column: 1 / 2;
 	}
 	#vbs_info div {
 		display: flex;

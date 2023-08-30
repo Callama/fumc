@@ -634,14 +634,14 @@ footer small {
 .alert {
   padding: 20px;
   background-color: ##4d4d4d; /* Red */
-  color: white;
+  color: black;
   margin-bottom: 15px;
 }
 
 /* The close button */
 .closebtn {
   margin-left: 15px;
-  color: white;
+  color: black;
   font-weight: bold;
   float: right;
   font-size: 22px;
@@ -652,5 +652,5 @@ footer small {
 
 /* When moving the mouse over the close button */
 .closebtn:hover {
-  color: black;
+  color: white;
 }

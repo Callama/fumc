@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<div class="alert">
-  		<span class="closebtn" onclick="this.parentElement.style.display='none';" &times;> </span> 
-  		<center> Join us every Sunday, 11:00am-12:00pm for service <a href="https://www.facebook.com/FirstUMCWaynesburg/" target="_blank"> online </a> or in the sanctuary!</center>
-		</div>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&family=Source+Sans+Pro&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="formbase.min.css">
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<title>First United Methodist Church of Waynesburg</title>
 </head>
@@ -29,51 +25,35 @@
 					<line x1="5" x2="95" y1="85" y2="5" stroke-width="14"/>
 				</svg>
 				<ul>
-					<li><a href="vbs.html"Events</a></li>
+					<!-- <li><a href="#">Home</a></li> -->
 					<!-- <li><a href="ministry.html">Ministry</a></li> -->
 					<!-- <li><a href="#">Classes</a></li> -->
 					<!-- <li><a href="#">Sunday School</a></li> -->
-					<!-- <li><a href="vbs.html">VBS</a></li> --> <!-- not needed for the moment-->
+					<!-- <li><a href="vbs.html">VBS</a></li> -->
 					<!-- <li><a href="#">Contact</a></li> -->
+          <li><a href="#">Events</a></li>
 				</ul>
 			</nav>
 		</header>
-		<div class="hero">
-			<h2 class="mission">For God to change lives through us.</h2>
-			<img src="images/communion.jpg" alt="Communion Items" class="responsive"/>
-		</div>
+		
 	</section>
-	<section class="main-info">
+  <section id="vbs_info">
+		<h2>Bounce Into Jesus' Love - FREE Fun!</h2>
+		<h3>October 19th, from 12:30 - 4:30pm</h3>
+		<p><a href="#registration_form" class="button">Register Now</a></p>
 		<div>
-			<img src="images/fumc-building.jpg" alt="First United Methodist Church Building" class="responsive"/>
-			<div class="worship-info">
-				<div class="weekly-events">
-					<h2>Worship with us</h2>
-					<p>Join us every Sunday at 11:00 am for our worship service. This service is available in person or online via <a href="https://www.facebook.com/FirstUMCWaynesburg/" target="_blank">our Facebook page</a>. The Sunday service is a large and blended program, complete with choir music, a wonderful organist, and more! This service is generally over by 12:00 pm.</p>
-					<p class="more-link">
-						<!-- <a href="ministry.html">More Worship Opportunities</a> -->
-					</p>
-				</div>
-				<div class="special-events">
-					<h3>Erin's Cafe</h3>
-					<p>Meet at the Fellowship Hall every Monday and Wendnesday at 6:00 pm for a warm and home-cooked meal! </p>
-					<!-- <p class="more-link"><a href="vbs.html">More VBS Information</a></p> -->
-				</div>
-			</div>
+			<p>Your child will have fun, meet new friends, and, most importantly, learn about how much we love them!</p>
+			<p>Meet us across the street from the Church to join in! You need to accompany your child throughout.</p>
 		</div>
 	</section>
-	<section class="message">
-		<blockquote>
-			“Whoever is generous to the poor lends to the Lord, and he will repay him for his deed.”
-		</blockquote>
-		<cite>Proverbs 19:17</cite>
+	<section id="event_activities">
+		<h2>Activities</h2>
+		<h3>Bounce Houses</h3>
+		<h3>Story Readings</h3>
+		<h3>Rock Paiting and Coloring</h3>
+    <h3>Refreshments (including cookies!)</h3>
 	</section>
-	<section class="reverend">
-		<h2>Meet Our Pastor</h2>
-		<img class="avatar" src="images/rev-lake.jpg" alt="Rev. David Lake"/>
-		<p class="avatar-title">Reverend David Lake</p>
-	</section>
-	<footer>
+ <footer>
 		<div id="footer_wrap">
 			<nav>
 				<ul>
@@ -81,7 +61,7 @@
 					<!-- <li><a href="ministry.html">Ministry</a></li> -->
 					<!-- <li><a href="#">Classes</a></li> -->
 					<!-- <li><a href="#">Sunday School</a></li> -->
-					<!-- li><a href="vbs.html">VBS</a></li> --> <!-- not needed for the moment-->
+					<li><a href="events.html">Events</a></li>
 					<!-- <li><a href="#">Contact</a></li> -->
 				</ul>
 			</nav>
@@ -97,11 +77,10 @@
 					<li><a href="mailto:firstumcpa112@gmail.com">firstumcpa112@gmail.com</a></li>
 				</ul>
 			</address>
-			<div id="credits">
-				<small>Credits to Dr. Chad Sherman &nbsp;• &nbsp;&copy; Copyright 2023 FUMC</small>
-			</div>	
+			<small>&copy; Copyright 2021, FUMC</small>
 		</div>
 	</footer>
 	<script src="script.js"></script>
+	<script src="form.js"></script>
 </body>
 </html>
